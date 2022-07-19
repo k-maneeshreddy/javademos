@@ -11,7 +11,7 @@ public class p01ArithmeticCalculator {
 		
 		    Scanner input = new Scanner(System.in);
 
-		    System.out.println("Select an operator: -, +, *, /");
+		    System.out.println("Select an operator: +, -, *, /");
 		    operator = input.next().charAt(0);
 		    // ask users to enter numbers
 		    System.out.println("first number");
@@ -52,8 +52,5 @@ public class p01ArithmeticCalculator {
 
 		    input.close();
 		  }
-<<<<<<< HEAD
 		}
-=======
-		}
->>>>>>> 81ff02dec29ea21344dabd1d560f6ddd33bd38c3
+
