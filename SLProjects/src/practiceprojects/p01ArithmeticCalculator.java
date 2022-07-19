@@ -6,43 +6,50 @@ public class p01ArithmeticCalculator {
 
 	public static void main(String[] args) {
 		
-Scanner scr = new Scanner(System.in);
+		    char operator;
+		    Double num1, num2, outcome;
 		
-		System.out.println("Select an operator : +,-,*,/");
-		char operator=scr.next().charAt(0);
-		
-		System.out.println("first number");
-		double num1=scr.nextDouble();
-		
-		System.out.println("second number");
-		double num2=scr.nextDouble();
-		
-		double Outcome;
-		
-		switch(operator)
-		{
-		case'+':
-				Outcome=num1+num2;
-				System.out.println(num1+"+"+num2+"="+Outcome);
-				break;
-			case'-':
-				Outcome=num1+num2;
-				System.out.println(num1+"-"+num2+"="+Outcome);
-				break;
-			case'*':
-				Outcome=num1+num2;
-				System.out.println(num1+"*"+num2+"="+Outcome);
-				break;
-			case'/':
-				Outcome=num1+num2;
-				System.out.println(num1+"/"+num2+"="+Outcome);
-				break;
-			default:
-				System.out.println("invalid");
-				break;
+		    Scanner input = new Scanner(System.in);
+
+		    System.out.println("Select an operator: -, +, *, /");
+		    operator = input.next().charAt(0);
+		    // ask users to enter numbers
+		    System.out.println("first number");
+		    num1 = input.nextDouble();
+		    System.out.println("second number");
+		    num2 = input.nextDouble();
+
+		    switch (operator) {
+
+		      // performs addition 
+		      case '+':
+		        outcome = num1 + num2;
+		        System.out.println(num1 + " + " + num2 + " = " + outcome);
+		        break;
+
+		      // performs subtraction 
+		      case '-':
+		        outcome = num1 - num2;
+		        System.out.println(num1 + " - " + num2 + " = " + outcome);
+		        break;
+
+		      // performs multiplication
+		      case '*':
+		        outcome = num1 * num2;
+		        System.out.println(num1 + " * " + num2 + " = " + outcome);
+		        break;
+
+		      // performs division
+		      case '/':
+		        outcome = num1 / num2;
+		        System.out.println(num1 + " / " + num2 + " = " + outcome);
+		        break;
+
+		      default:
+		        System.out.println("Invalid !");
+		        break;
+		    }
+
+		    input.close();
+		  }
 		}
-		
-	}
-
-}
-
