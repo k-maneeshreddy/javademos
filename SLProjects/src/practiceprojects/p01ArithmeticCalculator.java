@@ -52,4 +52,8 @@ public class p01ArithmeticCalculator {
 
 		    input.close();
 		  }
+<<<<<<< HEAD
 		}
+=======
+		}
+>>>>>>> 81ff02dec29ea21344dabd1d560f6ddd33bd38c3
