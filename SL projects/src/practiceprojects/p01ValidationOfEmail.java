@@ -1,34 +1,37 @@
 package practiceprojects;
-
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.*;
 
 public class p01ValidationOfEmail {
 	
     public static void main(String[] args) 
     { 
-      String[] strArray = new String[6];
-      strArray[0]= "tony@gmail.com";
-      strArray[1]= "max@gmail.com"; 
-      strArray[2]= "rosey@gmail.com"; 
-      strArray[3]= "tim@gmail.com"; 
-      strArray[4]= "jones@gmail.com";
-      strArray[5]= "jack@gmail.com"; 
+    	
+      ArrayList<String> list= new ArrayList<String>();
+     // String[] strArray = new String[6];
+      list.add("sai@gmail.com");
+      list.add("saimaneesh@gmail.com"); 
+      list.add("maneeshkumar@gmail.com"); 
+      list.add("maneeshreddy@gmail.com"); 
+      list.add("manish@gmail.com");
+      list.add("saimaneeshkumar@gmail.com"); 
       
-        boolean found = false;
-        int index = 0;
+    
         
-        Scanner Str=new Scanner(System.in);
-        System.out.println("Enter Email ID:");
-        String a= Str.nextLine(); 
-       for (int i = 0; i <strArray.length; i++) {
-       if(a.equals(strArray[i])) {
-            index = i; found = true; 
-            }
-        }
-       if(found)
-          System.out.println("\n" +a +" found at the index "+index);
-        else
-          System.out.println("\n" +a +" not found in the array");
- 
+      String searchElement;
+      System.out.println("E-mail: ");
+      Scanner scanner = new Scanner(System.in);
+      searchElement = scanner.nextLine();
+      String regex = "^(.+)@(.+)$";
+      Matcher matcher = Pattern.compile(regex).matcher(searchElement);
+      if (matcher.matches() && list.stream().anyMatch(mail -> mail.equals(searchElement))) {
+          System.out.println(searchElement + " = is present");
+      } else {
+          System.out.println("Invalid or is not present");
+      }
+                   }
+                
     }
-}
